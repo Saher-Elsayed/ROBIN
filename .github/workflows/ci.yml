@@ -48,7 +48,7 @@ jobs:
           cd paper
           pdflatex -interaction=nonstopmode robin.tex
           pdflatex -interaction=nonstopmode robin.tex
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: robin-paper
           path: paper/robin.pdf
