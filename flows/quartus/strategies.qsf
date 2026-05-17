@@ -1,0 +1,9 @@
+################################################################################
+# ROBIN — Quartus canonical strategy bundles (referenced by directive deltas)
+################################################################################
+set_global_assignment -name OPTIMIZATION_TECHNIQUE SPEED
+set_global_assignment -name HYPER_RETIMER_ENABLE ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_EFFORT NORMAL
+set_global_assignment -name FITTER_AGGRESSIVE_ROUTABILITY_OPTIMIZATION AUTOMATICALLY
+set_global_assignment -name FITTER_INITIAL_PLACEMENT_SEED 0
+set_global_assignment -name FINAL_PLACEMENT_OPTIMIZATIONS AUTOMATICALLY

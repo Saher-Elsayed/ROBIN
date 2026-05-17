@@ -1,0 +1,84 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+*.egg
+MANIFEST
+.installed.cfg
+
+# Virtualenv
+.env
+.venv
+env/
+venv/
+
+# Testing
+.tox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Logs / runs
+runs/
+logs/
+wandb/
+*.log
+
+# LaTeX intermediates
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.toc
+paper/*.bbl
+paper/*.blg
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.synctex.gz
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Vivado / Quartus
+*.jou
+*.str
+*.backup.jou
+*.backup.log
+.Xil/
+vivado_*.backup.*
+quartus_*.qpf.bak
+db/
+incremental_db/
+output_files/
+.qsys_edit/
+
+# Outputs
+out/
+output/
+*.bit
+*.bitstream

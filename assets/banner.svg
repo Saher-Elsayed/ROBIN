@@ -1,0 +1,218 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 320" width="1280" height="320" role="img" aria-label="ROBIN: Robust FPGA timing closure">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="die" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1e3a5f"/>
+      <stop offset="1" stop-color="#0f1e30"/>
+    </linearGradient>
+    <linearGradient id="envelope" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0"   stop-color="#15803d" stop-opacity="0.15"/>
+      <stop offset="0.5" stop-color="#15803d" stop-opacity="0.45"/>
+      <stop offset="1"   stop-color="#15803d" stop-opacity="0.15"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="2"/></filter>
+  </defs>
+
+  <!-- background -->
+  <rect width="1280" height="320" fill="url(#bg)"/>
+
+  <!-- subtle grid -->
+  <g stroke="#1e293b" stroke-width="0.5" opacity="0.8">
+    <path d="M0 80 H1280 M0 160 H1280 M0 240 H1280"/>
+    <path d="M160 0 V320 M320 0 V320 M480 0 V320 M640 0 V320 M800 0 V320 M960 0 V320 M1120 0 V320"/>
+  </g>
+
+  <!-- LEFT: stylised FPGA die -->
+  <g transform="translate(60,60)">
+    <rect width="200" height="200" rx="8" fill="url(#die)" stroke="#2E5C8A" stroke-width="1.2"/>
+    <!-- AIE tile band -->
+    <rect x="10" y="14" width="180" height="22" fill="#059669" opacity="0.55"/>
+    <g fill="#10b981" opacity="0.85">
+      <rect x="14"  y="18" width="14" height="14"/>
+      <rect x="32"  y="18" width="14" height="14"/>
+      <rect x="50"  y="18" width="14" height="14"/>
+      <rect x="68"  y="18" width="14" height="14"/>
+      <rect x="86"  y="18" width="14" height="14"/>
+      <rect x="104" y="18" width="14" height="14"/>
+      <rect x="122" y="18" width="14" height="14"/>
+      <rect x="140" y="18" width="14" height="14"/>
+      <rect x="158" y="18" width="14" height="14"/>
+      <rect x="176" y="18" width="14" height="14" opacity="0.0"/>
+    </g>
+
+    <!-- CLB heatmap (center hotter, edges cooler) -->
+    <g>
+      <!-- ten columns x eight rows, simulated radial heat -->
+      <g transform="translate(14,46)">
+      <!-- row 0 (top) -->
+      <rect x="0"   y="0"  width="14" height="14" fill="#3a5b8a"/>
+      <rect x="16"  y="0"  width="14" height="14" fill="#3f6493"/>
+      <rect x="32"  y="0"  width="14" height="14" fill="#4f73a2"/>
+      <rect x="48"  y="0"  width="14" height="14" fill="#5b7eaf"/>
+      <rect x="64"  y="0"  width="14" height="14" fill="#5b7eaf"/>
+      <rect x="80"  y="0"  width="14" height="14" fill="#4f73a2"/>
+      <rect x="96"  y="0"  width="14" height="14" fill="#3f6493"/>
+      <rect x="112" y="0"  width="14" height="14" fill="#3a5b8a"/>
+      <rect x="128" y="0"  width="14" height="14" fill="#365582"/>
+      <rect x="144" y="0"  width="14" height="14" fill="#345080"/>
+      <!-- row 1 -->
+      <rect x="0"   y="16" width="14" height="14" fill="#3f6493"/>
+      <rect x="16"  y="16" width="14" height="14" fill="#5b7eaf"/>
+      <rect x="32"  y="16" width="14" height="14" fill="#7090c0"/>
+      <rect x="48"  y="16" width="14" height="14" fill="#8e6e85"/>
+      <rect x="64"  y="16" width="14" height="14" fill="#8e6e85"/>
+      <rect x="80"  y="16" width="14" height="14" fill="#7090c0"/>
+      <rect x="96"  y="16" width="14" height="14" fill="#5b7eaf"/>
+      <rect x="112" y="16" width="14" height="14" fill="#3f6493"/>
+      <rect x="128" y="16" width="14" height="14" fill="#3a5b8a"/>
+      <rect x="144" y="16" width="14" height="14" fill="#365582"/>
+      <!-- row 2 -->
+      <rect x="0"   y="32" width="14" height="14" fill="#4f73a2"/>
+      <rect x="16"  y="32" width="14" height="14" fill="#7090c0"/>
+      <rect x="32"  y="32" width="14" height="14" fill="#b07060"/>
+      <rect x="48"  y="32" width="14" height="14" fill="#c2410c"/>
+      <rect x="64"  y="32" width="14" height="14" fill="#c2410c"/>
+      <rect x="80"  y="32" width="14" height="14" fill="#b07060"/>
+      <rect x="96"  y="32" width="14" height="14" fill="#7090c0"/>
+      <rect x="112" y="32" width="14" height="14" fill="#4f73a2"/>
+      <rect x="128" y="32" width="14" height="14" fill="#3f6493"/>
+      <rect x="144" y="32" width="14" height="14" fill="#3a5b8a"/>
+      <!-- row 3 -->
+      <rect x="0"   y="48" width="14" height="14" fill="#5b7eaf"/>
+      <rect x="16"  y="48" width="14" height="14" fill="#8e6e85"/>
+      <rect x="32"  y="48" width="14" height="14" fill="#c2410c"/>
+      <rect x="48"  y="48" width="14" height="14" fill="#dc2626"/>
+      <rect x="64"  y="48" width="14" height="14" fill="#dc2626"/>
+      <rect x="80"  y="48" width="14" height="14" fill="#c2410c"/>
+      <rect x="96"  y="48" width="14" height="14" fill="#8e6e85"/>
+      <rect x="112" y="48" width="14" height="14" fill="#5b7eaf"/>
+      <rect x="128" y="48" width="14" height="14" fill="#4f73a2"/>
+      <rect x="144" y="48" width="14" height="14" fill="#3f6493"/>
+      <!-- row 4 -->
+      <rect x="0"   y="64" width="14" height="14" fill="#5b7eaf"/>
+      <rect x="16"  y="64" width="14" height="14" fill="#8e6e85"/>
+      <rect x="32"  y="64" width="14" height="14" fill="#c2410c"/>
+      <rect x="48"  y="64" width="14" height="14" fill="#dc2626"/>
+      <rect x="64"  y="64" width="14" height="14" fill="#dc2626"/>
+      <rect x="80"  y="64" width="14" height="14" fill="#c2410c"/>
+      <rect x="96"  y="64" width="14" height="14" fill="#8e6e85"/>
+      <rect x="112" y="64" width="14" height="14" fill="#5b7eaf"/>
+      <rect x="128" y="64" width="14" height="14" fill="#4f73a2"/>
+      <rect x="144" y="64" width="14" height="14" fill="#3f6493"/>
+      <!-- row 5 -->
+      <rect x="0"   y="80" width="14" height="14" fill="#4f73a2"/>
+      <rect x="16"  y="80" width="14" height="14" fill="#7090c0"/>
+      <rect x="32"  y="80" width="14" height="14" fill="#b07060"/>
+      <rect x="48"  y="80" width="14" height="14" fill="#c2410c"/>
+      <rect x="64"  y="80" width="14" height="14" fill="#c2410c"/>
+      <rect x="80"  y="80" width="14" height="14" fill="#b07060"/>
+      <rect x="96"  y="80" width="14" height="14" fill="#7090c0"/>
+      <rect x="112" y="80" width="14" height="14" fill="#4f73a2"/>
+      <rect x="128" y="80" width="14" height="14" fill="#3f6493"/>
+      <rect x="144" y="80" width="14" height="14" fill="#3a5b8a"/>
+      <!-- row 6 -->
+      <rect x="0"   y="96" width="14" height="14" fill="#3f6493"/>
+      <rect x="16"  y="96" width="14" height="14" fill="#5b7eaf"/>
+      <rect x="32"  y="96" width="14" height="14" fill="#7090c0"/>
+      <rect x="48"  y="96" width="14" height="14" fill="#8e6e85"/>
+      <rect x="64"  y="96" width="14" height="14" fill="#8e6e85"/>
+      <rect x="80"  y="96" width="14" height="14" fill="#7090c0"/>
+      <rect x="96"  y="96" width="14" height="14" fill="#5b7eaf"/>
+      <rect x="112" y="96" width="14" height="14" fill="#3f6493"/>
+      <rect x="128" y="96" width="14" height="14" fill="#3a5b8a"/>
+      <rect x="144" y="96" width="14" height="14" fill="#365582"/>
+      <!-- row 7 -->
+      <rect x="0"   y="112" width="14" height="14" fill="#3a5b8a"/>
+      <rect x="16"  y="112" width="14" height="14" fill="#3f6493"/>
+      <rect x="32"  y="112" width="14" height="14" fill="#4f73a2"/>
+      <rect x="48"  y="112" width="14" height="14" fill="#5b7eaf"/>
+      <rect x="64"  y="112" width="14" height="14" fill="#5b7eaf"/>
+      <rect x="80"  y="112" width="14" height="14" fill="#4f73a2"/>
+      <rect x="96"  y="112" width="14" height="14" fill="#3f6493"/>
+      <rect x="112" y="112" width="14" height="14" fill="#3a5b8a"/>
+      <rect x="128" y="112" width="14" height="14" fill="#365582"/>
+      <rect x="144" y="112" width="14" height="14" fill="#345080"/>
+      </g>
+    </g>
+
+    <!-- BRAM columns -->
+    <rect x="50"  y="46" width="6" height="128" fill="#6366f1" opacity="0.7"/>
+    <rect x="100" y="46" width="6" height="128" fill="#6366f1" opacity="0.7"/>
+    <rect x="150" y="46" width="6" height="128" fill="#8b5cf6" opacity="0.7"/>
+
+    <!-- NoC -->
+    <line x1="14" y1="110" x2="186" y2="110" stroke="#dc2626" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.8"/>
+    <line x1="100" y1="46" x2="100" y2="174" stroke="#dc2626" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.8"/>
+
+    <!-- HBM / PCIe edges -->
+    <rect x="-8" y="80" width="6" height="40" fill="#0ea5e9" opacity="0.85"/>
+    <rect x="202" y="80" width="6" height="40" fill="#ec4899" opacity="0.85"/>
+
+    <!-- frame label -->
+    <text x="100" y="194" text-anchor="middle" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10" fill="#94a3b8">post-route heatmap</text>
+  </g>
+
+  <!-- RIGHT: conformal envelope plot -->
+  <g transform="translate(820,60)">
+    <!-- frame -->
+    <rect width="400" height="200" rx="8" fill="#0b1220" stroke="#2E5C8A" stroke-width="1.0" opacity="0.75"/>
+    <!-- axes -->
+    <line x1="30" y1="170" x2="380" y2="170" stroke="#64748b" stroke-width="0.6"/>
+    <line x1="30" y1="20"  x2="30"  y2="170" stroke="#64748b" stroke-width="0.6"/>
+    <line x1="30" y1="110" x2="380" y2="110" stroke="#64748b" stroke-width="0.4" stroke-dasharray="4,3" opacity="0.7"/>
+
+    <!-- envelope band -->
+    <path d="M 40 70  C 100 60, 160 80, 220 65  S 320 75, 370 70
+             L 370 145 C 320 150, 220 135, 160 145
+             S 100 150, 40 140 Z"
+          fill="url(#envelope)" stroke="#15803d" stroke-width="1.0" opacity="0.85"/>
+
+    <!-- center prediction line -->
+    <path d="M 40 110  C 100 100, 160 120, 220 105  S 320 115, 370 110"
+          fill="none" stroke="#22c55e" stroke-width="1.6" filter="url(#glow)"/>
+
+    <!-- held-out WNS points -->
+    <g fill="#fbbf24" stroke="#92400e" stroke-width="0.4">
+      <circle cx="60"  cy="108" r="2.8"/>
+      <circle cx="95"  cy="103" r="2.8"/>
+      <circle cx="130" cy="114" r="2.8"/>
+      <circle cx="165" cy="118" r="2.8"/>
+      <circle cx="200" cy="110" r="2.8"/>
+      <circle cx="235" cy="108" r="2.8"/>
+      <circle cx="270" cy="111" r="2.8"/>
+      <circle cx="305" cy="115" r="2.8"/>
+      <circle cx="340" cy="109" r="2.8"/>
+      <circle cx="368" cy="111" r="2.8"/>
+    </g>
+
+    <!-- labels -->
+    <text x="200" y="14"  text-anchor="middle" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="11" fill="#94a3b8">conformal sign-off envelope</text>
+    <text x="200" y="190" text-anchor="middle" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9"  fill="#64748b">test point z</text>
+    <text x="20"  y="22"  text-anchor="end"    font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9"  fill="#64748b">WNS</text>
+    <text x="32"  y="105" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9"  fill="#94a3b8">0</text>
+  </g>
+
+  <!-- CENTRE wordmark -->
+  <g transform="translate(640,160)" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+    <text y="-30" font-size="72" font-weight="800" fill="#e2e8f0" letter-spacing="-2">ROBIN</text>
+    <text y="6"   font-size="16" font-weight="400" fill="#94a3b8">Robust FPGA Timing Closure</text>
+    <text y="32"  font-size="13" font-weight="400" fill="#64748b">distributionally-robust RL  ·  conformal sign-off  ·  Vivado &amp; Quartus</text>
+
+    <!-- three metric pills -->
+    <g transform="translate(-220,58)">
+      <rect x="-58" y="0" width="116" height="26" rx="13" fill="none" stroke="#2E5C8A" stroke-width="1.0"/>
+      <text y="17" font-size="13" font-weight="600" fill="#7CB7CC">+14.4 pp closure</text>
+    </g>
+    <g transform="translate(0,58)">
+      <rect x="-58" y="0" width="116" height="26" rx="13" fill="none" stroke="#15803d" stroke-width="1.0"/>
+      <text y="17" font-size="13" font-weight="600" fill="#4ade80">±2 pp coverage</text>
+    </g>
+    <g transform="translate(220,58)">
+      <rect x="-58" y="0" width="116" height="26" rx="13" fill="none" stroke="#C2410C" stroke-width="1.0"/>
+      <text y="17" font-size="13" font-weight="600" fill="#fb923c">4,900 P&amp;R runs</text>
+    </g>
+  </g>
+</svg>
