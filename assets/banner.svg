@@ -196,21 +196,21 @@
   </g>
 
   <!-- CENTRE wordmark -->
-  <g transform="translate(640,160)" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <g transform="translate(590,160)" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
     <text y="-30" font-size="72" font-weight="800" fill="#e2e8f0" letter-spacing="-2">ROBIN</text>
     <text y="6"   font-size="16" font-weight="400" fill="#94a3b8">Robust FPGA Timing Closure</text>
     <text y="32"  font-size="13" font-weight="400" fill="#64748b">distributionally-robust RL  ·  conformal sign-off  ·  Vivado &amp; Quartus</text>
 
     <!-- three metric pills -->
-    <g transform="translate(-220,58)">
+    <g transform="translate(-116,42)">
       <rect x="-58" y="0" width="116" height="26" rx="13" fill="none" stroke="#2E5C8A" stroke-width="1.0"/>
-      <text y="17" font-size="13" font-weight="600" fill="#7CB7CC">+14.4 pp closure</text>
+      <text y="17" font-size="13" font-weight="600" fill="#7CB7CC">+14.0 pp closure</text>
     </g>
-    <g transform="translate(0,58)">
+    <g transform="translate(0,42)">
       <rect x="-58" y="0" width="116" height="26" rx="13" fill="none" stroke="#15803d" stroke-width="1.0"/>
-      <text y="17" font-size="13" font-weight="600" fill="#4ade80">±2 pp coverage</text>
+      <text y="17" font-size="13" font-weight="600" fill="#4ade80">92.7% coverage</text>
     </g>
-    <g transform="translate(220,58)">
+    <g transform="translate(116,42)">
       <rect x="-58" y="0" width="116" height="26" rx="13" fill="none" stroke="#C2410C" stroke-width="1.0"/>
       <text y="17" font-size="13" font-weight="600" fill="#fb923c">4,900 P&amp;R runs</text>
     </g>
